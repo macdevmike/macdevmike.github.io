@@ -1,0 +1,82 @@
+*{
+  text-decoration: none;
+}
+
+a:link{
+  color: #BF1E19;
+}
+
+li{
+  list-style-type: none;
+}
+
+a:visited{
+  color: #BF1E19;
+}
+
+body{
+  background-color: #F4F5FF;
+}
+
+header{
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+time{
+font-family: 'Dancing Script', cursive;
+font-size: 2em;
+position: absolute;
+height: 150px;
+top: 395px;
+left: 450px;
+width: 280px;
+}
+
+nav{
+
+  position: absolute;
+
+
+  text-align: center;
+
+
+  top:405px;
+
+}
+
+#title{
+  font-family: 'Noto Serif', serif;
+  position: absolute;
+  height: 150spx;
+  width: 900px;
+  top:355px;
+  left: 720px;
+}
+
+#post{
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.5em;
+  position: absolute;
+  width: 900px;
+  top: 455px;
+  left:720px;
+  height: 1000px;
+}
+
+#culture{
+  font-family: cursive;
+  font-size: 2em;
+  width: 300px;
+  height: 400px;
+  left: 600px;
+}
+
+#tech{
+  font-family: cursive;
+  font-size: 2em;
+  width: 375px;
+  height: 400px;
+  left: 925px;
+}
