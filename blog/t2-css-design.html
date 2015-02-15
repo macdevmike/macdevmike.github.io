@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+  <title>MacDevMike's Code Journey</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/index-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+</head>
+<main>
+  <header>
+    <img src="../sfbridge.jpg" />
+  </header>
+
+  <body>
+
+
+
+  </body>
+
+  <div id="welcome">
+
+    When should I use CSS "ID's" vs "Classes?"
+
+  </div>
+
+  <div id="intro">
+<br>
+When I was first learning CSS, it was immediately clear how powerful the stylesheet concept and the Document Object Model (DOM) really are. The concept of taking pieces of the page, assigning an ID or Class as a method of turning that group of data into a CSS object, and then defining how you want CSS to treat that object is useful and important. But one of the things that I had a difficult time with was when to use each of these strategies. The goal of an ID and a Class in CSS is very similar: to manage HTML elements.
+</br>
+<br>
+Fortunately the best practices for what to use in various scenarios is very strait forward. In the case of ID's, the best practice is to use them for a specific element. This could be a header, or a footer for example. Perhaps we have one title element, and we want to manage it with some specific code. In this case, the best practice is to manage the element with an ID.
+</br>
+<br>
+In regards to classes, I have found that the best way to think about them is by considering their name. To identify a "class," we are really creating an element type to manage multiple elements on the page that share the same requirements. In addition, an important different between an ID and a class is that an element can have multiple classes assigned to it. But an element can only have one ID, and in this case it can be limiting if you need to have multiple methods of addressing the element.
+</br>
+<br>
+To quote the "Stack Overflow" community "A good way to remember this is a class is a type of item, and an ID is the unique name of an item on the page."
+</br>
+
+</div>
+  <nav id="nav">
+    <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About Me</a></li>
+    <li><a href="blog.html">My Blog</a></li>
+    <li><a href="https://github.com/macdevmike">My GitHub</a></li>
+    <li><a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile">My Linked In</a></li>
+    <li><a href="https://twitter.com/MikeHenkelman">My Twitter</a></li>
+
+
+
+    </ul>
+  </nav>
+  <figure id="title">
+    <h1><!--TITLE--></h1>
+  </figure>
+  <figure id="post">
+      <!--POST DATA-->
+  </figure>
+</main>
+</html>
