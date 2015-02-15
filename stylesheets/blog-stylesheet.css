@@ -20,63 +20,45 @@ body{
 
 header{
   position: absolute;
-  top: -10px;
-  left: -10px;
+  top: 10px;
+  left: 40px;
 }
 
-time{
-font-family: 'Dancing Script', cursive;
-font-size: 2em;
-position: absolute;
-height: 150px;
-top: 395px;
-left: 450px;
-width: 280px;
-}
 
-nav{
+#nav{
 
   position: absolute;
-
-
   text-align: center;
-
-
-  top:405px;
-
+  top:325px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.25em;
 }
 
-#title{
+#welcome{
+  font-family: 'Dosis';
+  position: absolute;
+  height: 150px;
+  width: 600px;
+  top:255px;
+  left: 420px;
+  font-size: 1.50em;
+}
+#blogposts {
+  font-family: 'Dosis';
+  font-size: 1.25em;
+  position: absolute;
+  height: 450px;
+  width: 300px;
+  top:315px;
+  left: 382px;
+}
+
+#intro{
   font-family: 'Noto Serif', serif;
   position: absolute;
-  height: 150spx;
-  width: 900px;
-  top:355px;
-  left: 720px;
-}
-
-#post{
-  font-family: 'Dosis', sans-serif;
-  font-size: 1.5em;
-  position: absolute;
-  width: 900px;
-  top: 455px;
-  left:720px;
-  height: 1000px;
-}
-
-#culture{
-  font-family: cursive;
-  font-size: 2em;
-  width: 300px;
+  font-size: 1em;
+  width: 650px;
   height: 400px;
-  left: 600px;
-}
-
-#tech{
-  font-family: cursive;
-  font-size: 2em;
-  width: 375px;
-  height: 400px;
-  left: 925px;
+  left: 225px;
+  top: 325px;
 }
