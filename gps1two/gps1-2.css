@@ -1,0 +1,28 @@
+html{
+  background-color: grey;
+  color: ffffff;
+
+
+}
+
+#title {
+  font-family: arial;
+}
+
+#names {
+
+  font-family: cursive;
+
+}
+#topics{
+  margin-left: 375px;
+
+
+}
+#questions{
+width: 600px;
+margin-left: 150px;
+margin-right: 150px;
+font-size: 1.25em;
+font-family: serif;
+}
