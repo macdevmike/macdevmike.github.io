@@ -6,24 +6,52 @@
 </head>
 
 <main>
-  <h1>The wonderland of Git and GitHub</h1>
+  <h1>Arrays and Hashes, The Inside Scoop!</h1>
   <h2></h2>
   <h4>Feb 4, 2015</h4>
 
   <section>
+
     <p>
-      As Bilbo Baggins said in "The Lord of the Rings" film "It's a scary business Frodo..going out your door. You step on to the road, and if you don't keep your feet, there's no knowing where you might be swept off.." When undertaking something as ambitious as computer programming, I am reminded of this quote. Making a decision to leave the comfort of my daily life, and all of the creature comforts that are familiar to me in order to embark on an adventure brings many feelings. Fear. Self doubt. Panic. Those are the negative ones trying to tell you that you are doing something reckless. And yet...there is that other voice that we listened to when we were little. The voice that says "This adventure is going to be wonderful too. And I can't wait."
+        When learning to program, there are many new concepts to grasp. In fact, it typically feels like everything is a new concept. But once you learn the fundamentals of a language, a suprising thing will happen when you go to pick up a second language. There are many fundamental principles and practices that are fairly universal in concept (if not practice) between programming languages. This includes things like storing data in a container that we refer to as a "Variable." It includes doing basic (and complex) math computations using standard math operators like addition, subtraction, multiplication, and division. And as we progress in the language, we get into some more powerful concepts called "Arrays" and "Hashes."
     </p>
     <p>
-        When starting out on our programming journey, establishing good habits up front is critical. And learning core concepts like version control, and the tools like Git and GitHub to support the concept are important to learn early. Version control allows a programmer to make consistant saves during development, and encourages experimentation with the code due to the freedom of "rolling back" to a prior version. In action, the process is like making a series of "saves" to a Word document. If a mistake is made, simply disregard this version of the document and open the previous save to continue from the last good version.
+        So why are Arrays and Hashes important? Why are they more powerful then a basic Variable, and why should you care about them? Well to begin, it will help to give some basic syntax to provide a point of reference to compare an array and hash. Lets start with the concept of a basic variable.
     </p>
     <p>
-        Where version control provides the process for saving different versions of your code, Git provides the method. With Git, we have a command line tool and repository system that lets us make incremental saves, and a robust set of tools that allow us to work on individual versions of specific code files. Created by coding legend Linus Torvalds, Git was originally designed for open source coders to work on different "branches" of code for the Linux operating system. Using Git, a programmer can "clone" a piece of code locally, make modifications and "push" these updated "commits" back to the master code branch that is being worked on. As you can see, Git provides a nice way for a group of programmers to coordinate their work on a shared project.
+      A variable simply allows to create a container to store data in. Think of it like a mailbox: We but information inside of it for later use. And anytime we want to access that data, we simply call the variable and use the data. So we can create a variable like so:
     </p>
-    <p>
-      This leaves the final piece: GitHub. As the name implies, GitHub provides a shared social space where programmers can share a "Hub" of code branches. These branches are then merged in a master branch. As the code evolves, each of the developers can fetch the latest changes to the "master branch" which serves as the source of truth in the project.
+    <div ID = "code">
+      name = "Mike" (This creates a container called "name" and then puts my name "Mike" inside it.)
+    </p>
+     <p>
+      Variables are like any kind of container, you can basically put any piece of information inside of them, and call that information with the variables name. So in this case, we can call my name anywhere in the code by using "name."
+    </p>
+     <p>
+      However, what if we want a container that can store more then one piece of information? Well, a variable doesn't really work for that. We can store a name or number in a variable, but what about a series of names or numbers? This dear friends is where the magic and power of Arrays and Hashes comes in to play.
     </p>
 
+     <p>
+      Lets begin with the concept of an Array. We can think of an Array as a basic list. We place a list of items inside its container, and then we can call individual items from the list. Inside an Array, we have a series of mini-containers called "elements" and when we want to call a specific item from the list, we refer to the array name and then the element inside the array. It's important to note that the first space in an array is element zero, we don't start with one:
+    </p>
+    <div ID = "code">
+      family_names = ["Mike", "Tiffany", "Matea", "Cayla", "Nevaeh"]
+    </div>
+    <p>
+      Here we have created a list of family names of my family that includes my wife Tiffany and our three kids Matea, Cayla, and Nevaeh. If I wanted access to my daughter Cayla, I could print her name by call her element in the array:
+    </p>
+    <div ID = "code">
+      puts family_names[3]
+    </div>
+     <p>
+      This brings us to the concept of Hashes. Where an Array is the concept of having a container that holds a list of items, a Hash is a container that acts as a dictionary. So we are able to define an item (we call this a key) and then assign it a value.
+    </p>
+     <p>
+      This leaves the final piece: GitHub. As the name implies, GitHub provides a shared social space where programmers can share a "Hub" of code branches. These branches are then merged in a master branch. As the code evolves, each of the developers can fetch the latest changes to the "master branch" which serves as the source of truth in the project.
+    </p>
+     <p>
+      This leaves the final piece: GitHub. As the name implies, GitHub provides a shared social space where programmers can share a "Hub" of code branches. These branches are then merged in a master branch. As the code evolves, each of the developers can fetch the latest changes to the "master branch" which serves as the source of truth in the project.
+    </p>
       <!-- copy and paste as many sections as you want to add paragraphs -->
   </section>
 </main>

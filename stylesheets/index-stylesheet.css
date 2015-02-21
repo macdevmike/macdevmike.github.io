@@ -24,7 +24,13 @@ header{
   left: 40px;
 }
 
+#code {
+  font-weight: bold;
+  font-family: sans-serif;
+  font-style: italic;
+  margin-top: 15px;
 
+}
 #nav{
 
   position: absolute;
@@ -36,6 +42,7 @@ header{
 
 #welcome{
   font-family: 'Dosis';
+  font-weight: bold;
   position: absolute;
   height: 150spx;
   width: 600px;

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+  <title>MacDevMike's Code Journey</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/index-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+</head>
+<main>
+  <header>
+    <img src="../sfbridge.jpg" />
+  </header>
+
+  <body>
+
+
+
+  </body>
+
+  <div id="welcome">
+
+    Arrays and Hashes, The Inside Scoop!
+
+  </div>
+
+  <div id="intro">
+<br>
+When learning to program, there are many new concepts to grasp. In fact, it typically feels like everything is a new concept. But once you learn the fundamentals of a language, a suprising thing will happen when you go to pick up a second language. There are many fundamental principles and practices that are fairly universal in concept (if not practice) between programming languages. This includes things like storing data in a container that we refer to as a "Variable." It includes doing basic (and complex) math computations using standard math operators like addition, subtraction, multiplication, and division. And as we progress in the language, we get into some more powerful concepts called "Arrays" and "Hashes."
+</br>
+<br>
+So why are Arrays and Hashes important? Why are they more powerful then a basic Variable, and why should you care about them? Well to begin, it will help to give some basic syntax to provide a point of reference to compare an array and hash. Lets start with the concept of a basic variable.
+</br>
+<br>
+A variable simply allows you to create a container to store data in. Think of it like a mailbox: We but information inside of it for later use. And anytime we want to access that data, we simply call the variable and use the data. So we can create a variable like so:
+</br>
+<div id="code">
+name = "Mike" (This creates a container called "name" and then puts my name "Mike" inside it.)
+</div>
+<br>
+Variables are like any kind of container, you can basically put any piece of information inside of them, and call that information with the variables name. So in this case, we can call my name anywhere in the code by using "name."
+</br>
+<br>
+However, what if we want a container that can store more then one piece of information? Well, a variable doesn't really work for that. We can store a name or number in a variable, but what about a series of names or numbers? This dear friends is where the magic and power of Arrays and Hashes comes in to play.
+</br>
+<br>
+Lets begin with the concept of an Array. We can think of an Array as a basic list. We place a list of items inside its container, and then we can call individual items from the list. Inside an Array, we have a series of mini-containers called "elements" and when we want to call a specific item from the list, we refer to the array name and then the element inside the array. It's important to note that the first space in an array is element zero, we don't start with one:
+</br>
+<div id="code">
+family_names = ["Mike", "Tiffany", "Matea", "Cayla", "Nevaeh"]
+</div>
+<br>
+Here we have created a list of family names of my family that includes my wife Tiffany and our three kids Matea, Cayla, and Nevaeh. If I wanted access to my daughter Cayla, I could print her name by call her element in the array:
+</br>
+<div id="code">
+puts family_names[3]
+</div>
+<br>
+This brings us to the concept of Hashes. Where an Array is the concept of having a container that holds a list of items, a Hash is a container that acts as a dictionary. So we are able to define an item (we call this a key) and then assign it a value. This allow us to create our own container that acts as a dictionary of items, so that we can call key words and have them reference the data that they define. Here is an example:
+</br>
+<div id="code">
+family_hash = {'Dad' => "Mike", 'Mom' => 'Tiffany', 'd1' => 'Matea', 'd2' => 'Cayla', 'd3' => "Nevaeh"}
+</div>
+<br>
+Arrays and Hashes are fairly universal concepts between languages that I have seen in C++, JavaScript and definitely in Ruby. The more we use them, the better our understanding of their abilities are.
+</br>
+
+</div>
+  <nav id="nav">
+    <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About Me</a></li>
+    <li><a href="blog.html">My Blog</a></li>
+    <li><a href="https://github.com/macdevmike">My GitHub</a></li>
+    <li><a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile">My Linked In</a></li>
+    <li><a href="https://twitter.com/MikeHenkelman">My Twitter</a></li>
+
+
+
+    </ul>
+  </nav>
+  <figure id="title">
+    <h1><!--TITLE--></h1>
+  </figure>
+  <figure id="post">
+      <!--POST DATA-->
+  </figure>
+</main>
+</html>ls
