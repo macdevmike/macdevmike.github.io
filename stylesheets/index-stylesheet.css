@@ -39,7 +39,9 @@ header{
   font-family: 'Dosis', sans-serif;
   font-size: 1.25em;
 }
-
+#listo{
+  font-weight: bold;
+}
 #welcome{
   font-family: 'Dosis';
   font-weight: bold;
