@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+  <title>MacDevMike's Code Journey</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/index-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+</head>
+<main>
+  <header>
+    <img src="../sfbridge.jpg" />
+  </header>
+
+  <body>
+
+
+
+  </body>
+
+  <div id="welcome">
+
+    Enumeration and the beauty of .map
+  </div>
+
+  <div id="intro">
+<br>
+Each week at Dev Bootcamp is quite the adventure. With the velocity that the program moves, we are introduced to real world, usable coding strategies. But since the program began, no week has brought on the flood of new information that week four did. And chief among these were some concepts for what are referred to as "destructive" and "non-destructive" arrays, enumarables, and classes. Each of these concepts works differently, with mostly different purposes in mind. However, they all have common concepts and today we will quickly look at those concepts, and discuss a particular class called Enumerables and an object in that class called "map"
+</br>
+<br>
+One of the wonderful things about Ruby is that the longer we study it, the more things begin to click together (much like legos.) And this really started happening for me when we looked at the concept of classes. While some folks get quickly lost in the particulars of classes, the concept is pretty strait forward. A class is a way to group objects together by a common criteria. One way to think about it is like a Wizards spell book. In this example, Ruby would be the spell book, classes would be chapters in the book, and in each chapter we have spells that work much like objects do. We group objects with a common purpose together in classes, and in addition the programmer can create classes of his/her own and assign new objects to the class.
+</br>
+<br>
+An interesting class that we had a look at in week four was the "Enumerables" class. This class deals with a variety of ways to traverse, search, and sort objects. Some of the objects in this class include ".min" for finding the smallest item in an object (array, hash, etc), ".max" for finding the largest item in an object, and ".map!" which we will look at in a moment. But before we do, it's important to understand the concept of destructive vs non-destructive arrays.
+</br>
+<br>
+As we have seen in my prior posting "Arrays and Hashes," an Array is an object list. It contains a list of items that are sorted in an index of elements. When we use a method on an array, this can be perceived as destructive if it modifies the original array and non-destructive if the method doesn't modify the array. So if we need to make modifications to an array, and we don't want to disturb the original array (perhaps we need to use it later in its original state), we need a way of making a copy. Enter ".map"
+</br>
+
+<br>
+(Destructive)
+
+</br>
+<div id="code">
+<li>array = [1,2,3,4,5]</li>
+<li>for x in 0..array.length-1</li>
+<li>array[x] = -arr[x]
+</div>
+
+<br>
+(Non Destructive using .map)
+</br>
+<div id="code">
+<li>array = [1,2,3,4,5]</li>
+<li>array_2 = array.map{|x| -x}
+</div>
+<br>
+In this case, we use .map to make a copy of the first array. We never actually modify the first array, and it is therefore non-destructive. Now we are free to make a change to the new array without modifying our original array:
+</br>
+<div id="code">
+array_2.join(", ") #=> -1, -2, -3, -4, -5
+</div>
+<br>
+As you can see, the .map method in the Enumarables class allows us to quickly and effectively duplicate arrays so that they can be modified in a destructive fashion while maintaining a non-destructive array to begin with.
+</br>
+
+<br>
+This was a very interesting concept to absorb this week, and yet was only one of many. If there is one thing I have learned about the structure of Dev Bootcamp, it's that we spend most of our time learning concepts like these seemingly several times per hour day after day. For a guy who felt like he was stagnating at work, this is effectively the antithesis: A destructive modification over the array that was my career. Only in this case, the destruction was welcome.
+<p>
+  </p>
+</br>
+
+
+
+</div>
+  <nav id="nav">
+    <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About Me</a></li>
+    <li><a href="blog.html">My Blog</a></li>
+    <li><a href="https://github.com/macdevmike">My GitHub</a></li>
+    <li><a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile">My Linked In</a></li>
+    <li><a href="https://twitter.com/MikeHenkelman">My Twitter</a></li>
+
+
+
+    </ul>
+  </nav>
+  <figure id="title">
+    <h1><!--TITLE--></h1>
+  </figure>
+  <figure id="post">
+      <!--POST DATA-->
+  </figure>
+</main>
+</html>
