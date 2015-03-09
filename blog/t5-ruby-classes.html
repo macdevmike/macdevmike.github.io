@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+  <title>MacDevMike's Code Journey</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/index-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+</head>
+<main>
+  <header>
+    <img src="../sfbridge.jpg" />
+  </header>
+
+  <body>
+
+
+
+  </body>
+
+  <div id="welcome">
+
+    Going to class on Ruby Classes
+  </div>
+
+  <div id="intro">
+
+<br>
+When you look at most modern languages like C, C++, Java Script, and Ruby you will find many similar concepts. For example, all of them share the concept of variables to store information in, arrays to store lists of items, math argument support for adding, subtracting, multiplying, and dividing plus some odds and ends like modulus. But when you look at student feedback, forum comments, and whats been written in many text books one of the more difficult concepts to grasp is called “Classes” and in object oriented languages we refer to this as the “Class/Object Model.” It’s no wonder that classes confound people due to the nature of the Class/Object Model defining much of “Object Oriented Programming.” But when we break down the usage, it’s really not that bad.
+</br>
+
+<br>
+The primary function of a class is merely to organize objects and methods. To begin, we look at creating the class an initializing what it does. Then, we create methods that serve a purpose for the objects that belong to the class. So to summarize, we create classes to organize items, and then define methods inside the class that will be accessible to all objects that are “instantiated” by proxy of the class.
+</br>
+
+<br>
+To begin, we will look at the creation of a class:
+</br>
+<div id="code">
+<li>class NameData</li>
+<li>attr_accessor :name</li>
+<li>   @name = "Mike"</li>
+<li>end</li>
+<li>end</li>
+
+</div>
+
+<br>
+Then, we will look at the creation of another class:
+</br>
+<div id="code">
+<li>class Greetings</li>
+<li>def initialize</li>
+<li>   @my_name = NameData.new</li>
+<li>end</li>
+<li>def print</li>
+<li>   puts "Hello, Your name is: #{@my_name.name}"</li>
+<li>end</li>
+<li>end</li>
+
+</div>
+<br>
+Here what we are doing is creating one class of names, and another class that provides a greeting when the “print” method is called. The one thing worth pointing out belongs to the NameData class, where we have a line that reads “attr_accessor :name”
+</br>
+
+<br>
+What we are doing here is setting an attribute using the accessor command word, which allows a read and write access level of the :name global variable by objects instantiated to the class. We could set that attribute to reader or writer if we wanted to limit the access to the variable.
+</br>
+
+<br>
+The key concept to grasp here is in the Greetings class, where we see an object created that actually belongs to the other class (NameData):
+</br>
+<div id="code">
+ @my_name = NameData.new
+</div>
+<br>
+Notice that what we are doing here is instantiating an object inside of the Greetings class that belongs to the NameData class. This allows something every important to take place. It allows us to have an object inside of one class that posesses all of the method powers of another class. So in this case, we can use the object.method inside of Greetings to access method abilities that are held inside of NameData.
+</br>
+
+<br>
+In our example, the function here is obviously simplistic. However, imagine creating a class with a dozen methods, and calling an object that belongs to that class and allows us to use our pre-defined .methods from that class. It compatmentalizes a listing of abilities, lets us spawn objects off as we will that have the powers of the class, without actually needing to redefine these methods each time we want to use them.
+</br>
+
+<br>
+This is what all that hub-bub is about. This is the key concept that Object Oriented Programming is based on. Welcome to the party!
+</br>
+
+
+
+</div>
+  <nav id="nav">
+    <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About Me</a></li>
+    <li><a href="blog.html">My Blog</a></li>
+    <li><a href="https://github.com/macdevmike">My GitHub</a></li>
+    <li><a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile">My Linked In</a></li>
+    <li><a href="https://twitter.com/MikeHenkelman">My Twitter</a></li>
+
+
+
+    </ul>
+  </nav>
+  <figure id="title">
+    <h1><!--TITLE--></h1>
+  </figure>
+  <figure id="post">
+      <!--POST DATA-->
+  </figure>
+</main>
+</html>
