@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+  <title>MacDevMike's Code Journey</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/index-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+</head>
+<main>
+  <header>
+    <img src="../sfbridge.jpg" />
+  </header>
+
+  <body>
+
+
+
+  </body>
+
+  <div id="welcome">
+
+    OOP concepts & Variable Scope
+  </div>
+
+  <div id="intro">
+
+<br>
+One of the more interesting things that I have learned in regards to new coding concepts in based on a principle called “Variable Scope.” When learning how to write code, early on the challenge is just learning the syntax and how to use it to accomplish a solution for a problem. But as time progresses, we learn how the syntax works and we add a new wrinkle to the thought process. At the core of that wrinkle is a concept based on scalability.
+</br>
+
+<br>
+Many times software begins its cycle trying to address specific problems. For example, we may need to write an application that will take some basic notes. A scope of work is established, we write an application that allows notes to be written, and then we are done. But inevitably, what happens next is that someone says “Hey, what would be great is if this application would let me set a due date, and then as that date gets closer it reminds me that I need to do something.” We now have a feature enhancement.
+</br>
+
+<br>
+Addressing feature enhancements is a natural part of the software developers life. But a question immediately emerges when evaluate the best way to incorporate new features: How well does our code scale? How many dependencies did we build into the code on the first pass? Was the code modular and easy to reuse, or repurpose? We call these kinds of concepts the codes “Design.”
+</br>
+
+<br>
+There are many tools that can be used to assist the codes design in regards to scalability and modularity. We have classes to isolate the purpose of different object groups. We have methods that can be very succinct and deliberately specific and limited in regards to what they do. And another tool in our tool box is called variable scope.
+</br>
+
+<br>
+Variable scope talks about an objects availability to the code blocks inside of classes, methods, and the entire code as a whole. The concept is that when developing with design and future enhancements in mind, we want to use the right variable scoping to limit the availability of these variables. The reason to do this is to isolate the different objects in our code to avoid situations where these objects could be affected by new code unexpectedly.
+</br>
+
+<br>
+We have five principle types of variables. The first would be a global variable, which is available everywhere in the code. Regardless of the class or method, the code will be able to see a global variable. These are declared using a dollar sign at the beginning of the variable name. The second is a constant, which is simply a global variable that will kick up an Argument Error if you attempt to change the constant variable assignment during the runtime of the code. A constant is traditionally listed in all uppercase letters in Ruby. Next we have a class variable, which is made available to the entire codebase that is listed in the class, and are initialized using two “@“ symbols. The last two variables we have are instance variables, and local variables. Instance variables are declared with a  single “@“ sign. Finally a simple local variable is limited in scope to existing within the method that it is used.
+</br>
+
+<br>
+Some examples are as follows:
+</br>
+
+<br>
+Global Variables
+</br>
+
+<div id="code">
+<li>$global_variable = 10</li>
+<li>$name_var = “Mike”</li>
+</div>
+
+<br>
+Constant Variables
+</br>
+
+<div id="code">
+<li>GLOBAL_VARIABLE = 10</li>
+<li>NAME_VAR = “Mike”</li>
+</div>
+
+<br>
+Class, Instance, and Local Variables:
+</br>
+
+<div id="code">
+<li>class Identity</li>
+<li>  @@name_var = “Mike” #Class Variable</li>
+<li>def initialialize (id, name, addr)</li>
+<li>@cust_id = id #Instance Variable</li>
+<li>@cust_name = name #Instance Variable</li>
+<li>@cust_addr = addr #Instance Variable</li>
+<li>@total_cust = id(1..*)</li>
+<li>end</li>
+<li>def count_cust(num)</li>
+<li>  count = @total_cust #Local Variable</li>
+<li>  puts count</li>
+<li>end</li>
+</div>
+
+<br>
+Limiting what parts of your code can access a variable is what defines a variables scope. Asking things like “Can this code block see that variable? Do I want it to? Does this make the application more or less sysinct? Does it make sense when we add new features?” Designing with these things in mind will make things much easier to maintain as features are added at a future time.
+
+</br>
+
+
+
+
+
+</div>
+  <nav id="nav">
+    <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About Me</a></li>
+    <li><a href="blog.html">My Blog</a></li>
+    <li><a href="https://github.com/macdevmike">My GitHub</a></li>
+    <li><a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile">My Linked In</a></li>
+    <li><a href="https://twitter.com/MikeHenkelman">My Twitter</a></li>
+
+
+
+    </ul>
+  </nav>
+  <figure id="title">
+    <h1><!--TITLE--></h1>
+  </figure>
+  <figure id="post">
+      <!--POST DATA-->
+  </figure>
+</main>
+</html>
