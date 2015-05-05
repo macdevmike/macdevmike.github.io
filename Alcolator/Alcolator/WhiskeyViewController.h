@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
-@interface WhiskeyViewController : UIViewController
-@property (weak, nonatomic) UITextField *beerPercentTextField;
-@property (weak, nonatomic) UISlider *beerCountSlider;
-@property (weak, nonatomic) UILabel *resultLabel;
+@interface WhiskeyViewController : ViewController
+
 
 - (void)buttonPressed:(UIButton *)sender;
 
