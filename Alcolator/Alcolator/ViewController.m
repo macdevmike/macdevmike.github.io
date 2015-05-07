@@ -43,6 +43,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = NSLocalizedString(@"Wine", @"wine");
     self.view.backgroundColor = [UIColor lightGrayColor];
     self.beerPercentTextField.delegate = self;
     self.beerPercentTextField.placeholder = NSLocalizedString(@"% Alcohol Content per Beer", @"Beer percent placeholder text");
