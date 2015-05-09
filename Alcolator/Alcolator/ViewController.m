@@ -93,7 +93,8 @@
     }
 }
 - (void)sliderValueDidChange:(UISlider *)sender {
-    NSLog(@"Slider value changed to %f", sender.value);
+    NSLog(@"Slider value changed to %1f", sender.value);
+    _resultLabel.text = [NSString stringWithFormat:@"%.1f", sender.value];
     [self.beerPercentTextField resignFirstResponder];
 
 }
