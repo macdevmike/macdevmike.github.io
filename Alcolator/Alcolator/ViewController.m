@@ -17,6 +17,18 @@
 
 @implementation ViewController
 
+- (instancetype) init {
+    self = [super init];
+    
+    if (self) {
+        self.title = NSLocalizedString(@"Wine", @"wine");
+        NSString *wineLabel = @"Wine";
+        NSLog(@"New View controller selected: %1@", wineLabel);
+        [self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -18)];
+    }
+    return self;
+}
+
 - (void)loadView {
     self.view = [[UIView alloc] init];
     UITextField *textField = [[UITextField alloc] init];
@@ -43,19 +55,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"Wine", @"wine");
     self.view.backgroundColor = [UIColor lightGrayColor];
     self.beerPercentTextField.delegate = self;
     self.beerPercentTextField.placeholder = NSLocalizedString(@"% Alcohol Content per Beer", @"Beer percent placeholder text");
     self.beerPercentTextField.textColor = [UIColor grayColor];
     [self.beerCountSlider addTarget:self action:@selector(sliderValueDidChange:) forControlEvents:UIControlEventValueChanged];
-    self.beerCountSlider.minimumValue = 1;
+    self.beerCountSlider.minimumValue = 0;
     self.beerCountSlider.maximumValue = 10;
     [self.calculateButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.calculateButton setTitle:NSLocalizedString(@"Calculate!", @"Calculate command") forState:UIControlStateNormal];
     self.calculateButton.titleLabel.font = [UIFont fontWithName:@"AppleSDGothicNew-Medium" size:(18.0)];
     [self.hideKeyboardTapGestureRecognizer addTarget:self action:@selector(tapGestureDidFire:)];
     self.resultLabel.numberOfLines = 0;
+    self.view.backgroundColor = [UIColor colorWithRed:0.741 green:0.925 blue:0.714 alpha:1];
     
 }
 
@@ -94,8 +106,9 @@
 }
 - (void)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %1f", sender.value);
-    _resultLabel.text = [NSString stringWithFormat:@"%.1f", sender.value];
+   // _resultLabel.text = [NSString stringWithFormat:@"%.1f", sender.value];
     [self.beerPercentTextField resignFirstResponder];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
 
 }
 - (void)buttonPressed:(UIButton *)sender {

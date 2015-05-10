@@ -14,10 +14,20 @@
 
 @implementation WhiskeyViewController
 
+- (instancetype) init {
+    self = [super init];
+    if (self) {
+        self.title = NSLocalizedString(@"Whiskey", nil);
+        NSString *whiskeyLabel = @"Whiskey";
+        NSLog(@"New View controller selected: %1@", whiskeyLabel);
+    }
+    return self;
+}
+
 - (void) viewDidLoad {
     
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"Whiskey", @"whiskey");
+    self.view.backgroundColor = [UIColor colorWithRed:0.992 green:0.992 blue:0.588 alpha:1];
 }
 
 - (void)buttonPressed:(UIButton *)sender {
