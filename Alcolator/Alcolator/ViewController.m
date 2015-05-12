@@ -22,8 +22,6 @@
     
     if (self) {
         self.title = NSLocalizedString(@"Wine", @"wine");
-        NSString *wineLabel = @"Wine";
-        NSLog(@"New View controller selected: %1@", wineLabel);
         [self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -18)];
     }
     return self;

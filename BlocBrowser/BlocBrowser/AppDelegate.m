@@ -1,17 +1,15 @@
 //
 //  AppDelegate.m
-//  Alcolator
+//  BlocBrowser
 //
-//  Created by Michael Henkelman on 5/3/15.
+//  Created by Michael Henkelman on 5/11/15.
 //  Copyright (c) 2015 Michael Henkelman. All rights reserved.
 //
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "WhiskeyViewController.h"
 
-@interface AppDelegate () <UITabBarControllerDelegate>
-
+@interface AppDelegate ()
 
 @end
 
@@ -19,25 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    ViewController *wineVC = [[ViewController alloc] init];
-    WhiskeyViewController *whiskeyVC = [[WhiskeyViewController alloc] init];
-    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
-    tabBarVC.viewControllers = @[wineVC, whiskeyVC];
-    tabBarVC.delegate = self;
     
-    self.window.rootViewController = tabBarVC;
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc]init]];
     [self.window makeKeyAndVisible];
     return YES;
 }
-
-
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
-    NSLog(@"New View controller selected: %1@", viewController.title);
-    
-}
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
