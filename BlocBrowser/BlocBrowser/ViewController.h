@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
+/**
+ Replaces the web view with a fresh one, erasing all history. This also updates the URL field and tool bar buttons appropriately.
+ This must be implemented in the MVC.m file
+ */
+- (void) resetWebView;
 
 @end
 
