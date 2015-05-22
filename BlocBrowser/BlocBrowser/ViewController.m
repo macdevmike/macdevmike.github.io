@@ -65,6 +65,8 @@
     
     self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.activityIndicator];
+    self.awesomeToolbar.frame = CGRectMake(20, 100, 280, 60);
+
 }
 
 
@@ -79,7 +81,6 @@
     self.textField.frame = CGRectMake(0, 0, width, itemHeight);
     self.webview.frame = CGRectMake(0, CGRectGetMaxY(self.textField.frame), width, browserHeight);
     
-    self.awesomeToolbar.frame = CGRectMake(20, 100, 280, 60);
 }
 
 #pragma mark - UITextFieldDelegate
@@ -189,6 +190,30 @@
     
     self.textField.text = nil;
     [self updateButtonsAndTitle];
+    
+}
+
+- (void) floatingToolbar:(BLCAwesomeFloatingToolbar *)toolbar didTrytToPanWithOffset:(CGPoint)offset {
+    CGPoint startingPoint = toolbar.frame.origin;
+    CGPoint newPoint = CGPointMake(startingPoint.x +offset.x, startingPoint.y + offset.y);
+    
+    CGRect potentialNewFrame = CGRectMake(newPoint.x, newPoint.y, CGRectGetWidth(toolbar.frame), CGRectGetHeight(toolbar.frame));
+    
+    if (CGRectContainsRect(self.view.bounds, potentialNewFrame)) {
+        toolbar.frame = potentialNewFrame;
+    }
+}
+
+- (void) floatingToolbar:(BLCAwesomeFloatingToolbar *)toolbar didPinchWithScale:(CGFloat)scale {
+    CGPoint toolbarCurrentPoint = toolbar.frame.origin;
+    CGFloat newX = toolbarCurrentPoint.x - (toolbar.frame.size.width*scale-toolbar.frame.size.width)/2;
+    CGFloat newY = toolbarCurrentPoint.y - (toolbar.frame.size.height*scale-toolbar.frame.size.height)/2;
+    
+    CGRect potentialNewFrame = CGRectMake(newX, newY, toolbar.frame.size.width*scale, toolbar.frame.size.height*scale);
+    
+    if (CGRectContainsRect(self.view.bounds, potentialNewFrame)) {
+        toolbar.frame = potentialNewFrame;
+    }
     
 }
 
