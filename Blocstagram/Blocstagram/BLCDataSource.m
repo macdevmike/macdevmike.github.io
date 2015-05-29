@@ -13,8 +13,6 @@
 
 @interface BLCDataSource ()
 
-@property (nonatomic, strong) NSArray *mediaItems;
-
 @end
 
 @implementation BLCDataSource
