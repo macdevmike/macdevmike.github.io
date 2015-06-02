@@ -164,6 +164,7 @@ static NSParagraphStyle *paragraphStyle;
 
 + (CGFloat) heightForMediaItem:(BLCMedia *)mediaItem width:(CGFloat)width {
     BLCMediaTableViewCell *layoutCell = [[BLCMediaTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"layoutCell"];
+    layoutCell.mediaItem = mediaItem;
     layoutCell.frame = CGRectMake(0, 0, width, CGRectGetHeight(layoutCell.frame));
     [layoutCell setNeedsLayout];
     [layoutCell layoutIfNeeded];
