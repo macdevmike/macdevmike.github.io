@@ -56,7 +56,7 @@
         int kindOfChange = [change[NSKeyValueChangeKindKey] intValue];
         
         if (kindOfChange == NSKeyValueChangeSetting) {
-            // Someone set a brand new images array
+            
             [self.tableView reloadData];
         } else if (kindOfChange == NSKeyValueChangeInsertion ||
                    kindOfChange == NSKeyValueChangeRemoval ||
@@ -64,17 +64,14 @@
 
             NSIndexSet *indexSetOfChanges = change[NSKeyValueChangeIndexesKey];
             
-            // Convert this NSIndexSet to an NSArray of NSIndexPaths (which is what the table view animation methods require)
             NSMutableArray *indexPathsThatChanged = [NSMutableArray array];
             [indexSetOfChanges enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
                 NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:idx inSection:0];
                 [indexPathsThatChanged addObject:newIndexPath];
             }];
             
-            // Call `beginUpdates` to tell the table view we're about to make changes
             [self.tableView beginUpdates];
             
-            // Tell the table view what the changes are
             if (kindOfChange == NSKeyValueChangeInsertion) {
                 [self.tableView insertRowsAtIndexPaths:indexPathsThatChanged withRowAnimation:UITableViewRowAnimationAutomatic];
             } else if (kindOfChange == NSKeyValueChangeRemoval) {
@@ -83,7 +80,6 @@
                 [self.tableView reloadRowsAtIndexPaths:indexPathsThatChanged withRowAnimation:UITableViewRowAnimationAutomatic];
             }
             
-            // Tell the table view that we're done telling it about changes, and to complete the animation
             [self.tableView endUpdates];
         }
     }
