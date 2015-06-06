@@ -101,17 +101,28 @@
         self.isRefreshing = YES;
         
         NSString *minID = [[self.mediaItems firstObject] idNumber];
+        
+        if (minID == nil)
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No new Data", @"No New Data") message:NSLocalizedString(@"Nothing new at this time", @"Greeting") delegate:nil cancelButtonTitle:NSLocalizedString(@"Continue", @"Continue") otherButtonTitles:nil];
+            [alert show];}
+            
+            else
+        {
         NSDictionary *parameters = @{@"min_id": minID};
         
         [self populateDataWithParameters:parameters completionHandler:^(NSError *error) {
             self.isRefreshing = NO;
             
-            if (completionHandler) {
+            if (completionHandler)
                 completionHandler(error);
-            }
         }];
+        }
     }
 }
+
+    
+
 
 - (void) requestOldItemsWithCompletionHandler:(BLCNewItemCompletionBlock)completionHandler {
     if (self.isLoadingOlderItems == NO && self.thereAreNoMoreOlderMessages == NO) {
