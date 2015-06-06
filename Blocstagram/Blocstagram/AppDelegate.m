@@ -23,6 +23,7 @@
     [BLCDataSource sharedInstance];
     
     UINavigationController *navVC = [[UINavigationController alloc] init];
+    if (![BLCDataSource sharedInstance].accessToken) {
     BLCLoginViewController *loginVC = [[BLCLoginViewController alloc] init];
     [navVC setViewControllers:@[loginVC] animated:YES];
     
@@ -30,6 +31,10 @@
         BLCImagesTableViewController *imagesVC = [[BLCImagesTableViewController alloc] init];
         [navVC setViewControllers:@[imagesVC] animated:YES];
     }];
+    } else {
+        BLCImagesTableViewController *imagesVC = [[BLCImagesTableViewController alloc] init];
+        [navVC setViewControllers:@[imagesVC] animated:YES];
+    }
     
     self.window.rootViewController = navVC;
     
