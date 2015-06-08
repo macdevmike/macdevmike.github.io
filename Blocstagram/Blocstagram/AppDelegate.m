@@ -34,6 +34,7 @@
     } else {
         BLCImagesTableViewController *imagesVC = [[BLCImagesTableViewController alloc] init];
         [navVC setViewControllers:@[imagesVC] animated:YES];
+        [[BLCDataSource sharedInstance] requestNewItemsWithCompletionHandler:nil];
     }
     
     self.window.rootViewController = navVC;

@@ -126,14 +126,8 @@
         
         NSString *minID = [[self.mediaItems firstObject] idNumber];
         
-        if (minID == nil)
-        {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"No new Data", @"No New Data") message:NSLocalizedString(@"Nothing new at this time", @"Greeting") delegate:nil cancelButtonTitle:NSLocalizedString(@"Continue", @"Continue") otherButtonTitles:nil];
-            [alert show];}
-            
-            else
-        {
-        NSDictionary *parameters = @{@"min_id": minID};
+        
+        NSDictionary *parameters = minID ? @{@"min_id": minID} : @{};
         
         [self populateDataWithParameters:parameters completionHandler:^(NSError *error) {
             self.isRefreshing = NO;
@@ -143,7 +137,7 @@
         }];
         }
     }
-}
+
 
     
 
@@ -153,7 +147,7 @@
         self.isLoadingOlderItems = YES;
         
         NSString *maxID = [[self.mediaItems lastObject] idNumber];
-        NSDictionary *parameters = @{@"max_id": maxID};
+        NSDictionary *parameters = maxID ? @{@"max_id": maxID} : @{};
                 
         [self populateDataWithParameters:parameters completionHandler:^(NSError *error) {
             self.isLoadingOlderItems = NO;
