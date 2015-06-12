@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface BLCMediaFullScreenAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 
 @property (nonatomic, assign) BOOL presenting;

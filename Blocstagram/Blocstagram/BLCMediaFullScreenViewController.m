@@ -8,6 +8,7 @@
 
 #import "BLCMediaFullScreenViewController.h"
 #import "BLCMedia.h"
+#import "BLCSharing.h"
 
 @interface BLCMediaFullScreenViewController () <UIScrollViewDelegate>
 
@@ -53,6 +54,15 @@
     
     [self.scrollView addGestureRecognizer:self.tap];
     [self.scrollView addGestureRecognizer:self.doubleTap];
+    
+    UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width -100, 20, 80, 40)];
+    [shareButton addTarget:self action:@selector(share) forControlEvents:UIControlEventTouchUpInside];
+    [shareButton setTitle:@"Share" forState:UIControlStateNormal];
+    [self.view addSubview:shareButton];
+}
+
+- (void) share {
+    [self presentViewController:[BLCSharing shareData:self.media] animated:YES completion:nil];
 }
 
 - (void) viewWillLayoutSubviews {

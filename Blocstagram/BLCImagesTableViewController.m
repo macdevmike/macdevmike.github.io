@@ -14,6 +14,7 @@
 #import "BLCMediaTableViewCell.h"
 #import "BLCMediaFullScreenViewController.h"
 #import "BLCMediaFullScreenAnimator.h"
+#import "BLCSharing.h"
 
 @interface BLCImagesTableViewController () <BLCMediaTableViewCellDelegate, UIViewControllerTransitioningDelegate>
 
@@ -160,6 +161,10 @@ return [self items].count;
     fullScreenVC.transitioningDelegate = self;
     fullScreenVC.modalPresentationStyle = UIModalPresentationCustom;
     [self presentViewController:fullScreenVC animated:YES completion:nil];
+}
+
+- (void) cell:(BLCMediaTableViewCell *)cell didLongPressImageView:(UIImageView *)imageView {
+    [self presentViewController:[BLCSharing shareData:cell.mediaItem] animated:YES completion:nil];
 }
 
 #pragma mark - UIViewControllerTransitioningDelegate
